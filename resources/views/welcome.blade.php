@@ -30,194 +30,88 @@
     <script type="text/javascript" href ="js/Search.js"></script>
     <link rel="stylesheet" href="{{ asset('css/style_menu.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/slider.css') }}" type="text/css">
+    
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
-  <body data-vide-bg="video/snow" >
-    <div id="menu">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-default" role="navigation"  >
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="">Music Mp3</a>
-                </div>
-                <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-2">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bài hát<b class="caret"></b></a>
-                            <ul class="dropdown-menu multi-column columns-2">
-                                <li>
-                                    <ul class="multi-column-dropdown col-sm-6">
-                                        <li><a href="" >Nhạc mới</a></li>
-                                        <li><a href="">Nhạc Trẻ</a></li>
-                                        <li><a href="">Trữ Tình</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Rock Việt</a></li>
-                                        <li><a href="#">Rap Việt</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul class="multi-column-dropdown col-sm-6">
-                                        <li><a href="#">Nhạc Hoa</a></li>
-                                        <li><a href="">Âu Mỹ</a></li>
-                                        <li><a href="#">Nhạc Hàn</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Hòa Tấu </a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Thể Loại Khác</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Playlist<b class="caret"></b></a>
-                            <ul class="dropdown-menu multi-column columns-2">
-                                <li>
-                                    <ul class="multi-column-dropdown col-sm-6">
-                                        <li><a href="#">Mới - Hot</a></li>
-                                        <li><a href="#">Nhạc Trẻ</a></li>
-                                        <li><a href="#">Trữ Tình</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Rock Việt</a></li>
-                                        <li><a href="#">Rap Việt</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul class="multi-column-dropdown col-sm-6">
-                                        <li><a href="#">Nhạc Hoa</a></li>
-                                        <li><a href="#">Âu Mỹ</a></li>
-                                        <li><a href="#">Nhạc Hàn</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Hòa Tấu </a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Thể Loại Khác</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chủ đề <b class="caret"></b></a>
-                            <ul class="dropdown-menu multi-column columns-3">
-                                <li>
-                                    <ul class="multi-column-dropdown col-sm-4 col-xs-12">
-                                        <li><a href="#">The Best Of 2017</a></li>
-                                        <li><a href="#">Coffe Time</a></li>
-                                        <li><a href="#">Acoustic</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Cover - Mashup</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Do You Travel</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul class="multi-column-dropdown col-sm-4 col-xs-12">
-                                        <li><a href="#">Nhạc Xuân</a></li>
-                                        <li><a href="#">Nhạc Vàng</a></li>
-                                        <li><a href="#">Cải Lương</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Nhạc V-POP</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Nhạc K-POP</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul class="multi-column-dropdown col-sm-4 col-xs-12">
-                                        <li><a href="#">EDM Sôi Động</a></li>
-                                        <li><a href="#">Nhạc Remix</a></li>
-                                        <li><a href="#">Nonstop</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Electronic</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Tin tức âm nhạc</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+  <body>
+        <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('', 'Music Mp3') }}
+                </a>
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ URL::to('singer/index') }}">Singers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ URL::to('composer/index') }}">Composers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ URL::to('song/index') }}">Songs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ URL::to('playlist/index') }}">Playlists</a>
+                  </li>
+                </ul>                              
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
                     </ul>
-                    <ul class="nav navbar-nav">
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <!-- <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li> -->
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quản lý<b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-column columns-1">
-                                    <li>
-                                        <ul class="multi-column-dropdown col-sm-8">
-                                            <li><a href="{{ URL::to('song/index') }}">Bài hát</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="{{ URL::to('singer/index') }}">Ca sĩ</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="{{ URL::to('composer/index') }}">Nhạc sĩ</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="{{ URL::to('playlist/index') }}">Playlist</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                        @endif
-                    </ul> <!-- END_urQuanLy -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }} " >Login</a></li>
-                            <li><a href="{{ url('/register') }}" >Register</a></li>
+                            <li class="nav-item">
+                                @if (Route::has('register'))
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                @endif
+                            </li>
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+                                        {{ __('Logout') }}
+                                    </a>
 
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul> <!-- END_urLOGIN -->
-                    <div class="row">    
-                        <div class="input-group" style="margin-top: 10px;padding-left: 50px; ">
-                                <div class="input-group-btn search-panel">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                        <span id="search_concept">Tìm kiếm theo</span> <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                      <li><a href="#contains">Bài hát</a></li>
-                                      <li><a href="#its_equal">Ca sĩ</a></li>
-                                      <li><a href="#greather_than">Album</a></li>
-                                      <li><a href="#less_than">Playlist</a></li>
-                                      <li class="divider"></li>
-                                      <li><a href="#all">Tất cả</a></li>
-                                    </ul>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                                 </div>
-                                <input type="hidden" name="search_param" value="all" id="search_param">         
-                                <input type="text" class="form-control" name="x" placeholder="Search term...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                                </span>
-                            </div>
-                    </div>
+                            </li>
+                        @endguest
+                    </ul>
                 </div>
-                <!--/.navbar-collapse-->
-            </nav>
             </div>
-        </div>
-    </div> <!-- menu -->
+        </nav>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -411,21 +305,7 @@
             </div>
         </div>
     </div>
-    <div id="player">
-        <audio controls autoplay hidden>
-         <source src="{{URL::asset('mp3/5bfce6c34dbef.mp3')}}" type="audio/mpeg">
-                    unsupported !! 
-        </audio>
-    </div>
-    <div class="panel panel-primary" >
-        <div class="panel-footer" style="background-color: #FAFAD2">
-            <div class="container">
-                <div class="caption">
-                    <p style="text-align: center;color: blue;">Copyright (@) AJAX TEAM</p>
-                </div>
-            </div>
-        </div>
-    </div>  
+
     <script src="/js/app.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://vodkabears.github.io/vide/js/jquery.vide.min.js"></script>
