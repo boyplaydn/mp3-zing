@@ -52,7 +52,6 @@
                                     <ul class="multi-column-dropdown col-sm-6">
                                         <li><a href="" >Nhạc mới</a></li>
                                         <li><a href="">Nhạc Trẻ</a></li>
-                                        <li><a href="">Trữ Tình</a></li>
                                         <li class="divider"></li>
                                         <li><a href="#">Rock Việt</a></li>
                                         <li><a href="#">Rap Việt</a></li>
