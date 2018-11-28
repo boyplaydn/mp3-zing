@@ -407,22 +407,7 @@
                 <hr>
             </div>
         </div>
-    </div>
-    <div id="player">
-        <audio controls autoplay hidden>
-         <source src="{{URL::asset('mp3/5bfce6c34dbef.mp3')}}" type="audio/mpeg">
-                    unsupported !! 
-        </audio>
-    </div>
-    <div class="panel panel-primary" >
-        <div class="panel-footer" style="background-color: #FAFAD2">
-            <div class="container">
-                <div class="caption">
-                    <p style="text-align: center;color: blue;">Copyright (@) AJAX TEAM</p>
-                </div>
-            </div>
-        </div>
-    </div>  
+    </div> 
     <script src="{{ asset('/js/app.js') }}"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://vodkabears.github.io/vide/js/jquery.vide.min.js"></script>
