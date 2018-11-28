@@ -1,9 +1,4 @@
-/node_modules
-/public/hot
-/public/mp3
-/public/storage
 /storage/*.key
-/vendor
 /.idea
 /.vscode
 /nbproject
