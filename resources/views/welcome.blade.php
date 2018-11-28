@@ -407,7 +407,8 @@
                 <hr>
             </div>
         </div>
-    </div> 
+    </div>
+
     <script src="{{ asset('/js/app.js') }}"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://vodkabears.github.io/vide/js/jquery.vide.min.js"></script>
